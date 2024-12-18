@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Default Colors of the Background and the Text */ 
+:root {
+  --background: #ffffff; /* Background Color in 'Light Mode' */
+  --foreground: #075985; /* Text Color in 'Light Mode' */
+}
+
+/* Colors of the Background and the Text for the Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #262626; /* Background Color in 'Dark Mode' */
+    --foreground: #ffffff; /* Text Color in 'Dark Mode' */
+  }
+}
+
+/* Applying the Variables in the Body of the Page */
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
+
+/* Default Colors Scheme for Contents in 'Light Mode' and 'Dark Mode' */
+.default-colors {
+  @apply bg-white text-sky-800 dark:bg-neutral-800 dark:text-white 
+}
+
+/* Default Border Colors Scheme in 'Light Mode' and 'Dark Mode' */
+.default-border {
+  @apply border-[1px] border-gray-300 dark:border-neutral-900
+}
+
+/* Default Button Styling */
+.default-button {
+  @apply px-4 py-2 bg-sky-800 hover:bg-sky-900 text-white font-medium rounded-lg
+}
+
+/* Default Input Styling */
+.default-input {
+  @apply 
+    w-full 
+    py-2 
+    rounded-lg 
+    bg-transparent 
+    border-[1px] 
+    border-gray-300 
+    dark:border-neutral-700
+    text-gray-300
+    focus:text-sky-800
+    dark:text-neutral-500
+    dark:focus:text-white
+    placeholder:text-gray-300
+    dark:placeholder:text-neutral-500 
+    outline-none
+}
+
+/* Default Underline Button Styling */
+.default-underline {
+  @apply
+    underline
+    text-sky-800
+    hover:text-sky-900
+    dark:hover:text-sky-700
+    font-medium
+}
